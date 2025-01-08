@@ -36,6 +36,8 @@ function calculatePrice() {
     const shopeePrice = suggestedPrice + shopeeFee;
     const elo7Price = suggestedPrice + elo7Fee;
 
+    
+
     // Exibe os resultados
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `
@@ -49,4 +51,20 @@ function calculatePrice() {
         <p>Preço sugerido (Shopee): R$ ${shopeePrice.toFixed(2)} (inclui 12% de comissão)</p>
         <p>Preço sugerido (Elo7): R$ ${elo7Price.toFixed(2)} (inclui 18% de comissão)</p>
     `;
+}
+
+function clearResults() {
+    // Limpa os valores dos campos de entrada
+    document.getElementById('nylon-cost').value = '';
+    document.getElementById('fabric-cost').value = '';
+    document.getElementById('fabric-height').value = '';
+    document.getElementById('fabric-width').value = '';
+    document.getElementById('zipper').value = '';
+    document.getElementById('cursor-quantity').value = '';
+    document.getElementById('quantity').value = '';
+    document.getElementById('profit').value = '';
+
+    // Limpa o conteúdo da área de resultados
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
 }

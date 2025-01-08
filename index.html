@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preços</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora de Preços</h2>
+        <div class="tamanho">
+            <div class="custo">
+                <label for="nylon-cost">Custo do metro de nylon comprado (por metro linear):</label>
+                <input type="number" id="nylon-cost" placeholder="Ex: 10.00">
+
+                <label for="fabric-cost">Custo do metro de tecido comprado:</label>
+                <input type="number" id="fabric-cost" placeholder="Ex: 20.00">
+            </div>
+
+
+            <div class="cm">
+                <label for="fabric-height">Altura do pedaço de tecido (em cm):</label>
+                <input type="number" id="fabric-height" placeholder="Ex: 30">
+                <label for="fabric-width">Largura do pedaço de tecido (em cm):</label>
+                <input type="number" id="fabric-width" placeholder="Ex: 20">
+            </div>
+
+        </div>
+
+
+        <div class="custoEpoecentagem">
+            <div>
+                <label for="zipper">Custo do zíper (por metro):</label>
+                <input type="number" id="zipper" placeholder="Ex: 5.00">
+                <label for="cursor-quantity">Quantidade de cursores por pacote:</label>
+                <input type="number" id="cursor-quantity" placeholder="Ex: 50">
+            </div>
+            <div>
+                <label for="quantity">Quantidade de cursores para a peça:</label>
+                <input type="number" id="quantity" placeholder="Ex: 2">
+                <label for="profit">Margem de lucro (%):</label>
+                <input type="number" id="profit" placeholder="Ex: 30">
+            </div>
+        </div>
+
+        <button onclick="calculatePrice()">Calcular Preço</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <script>
+        // function calculatePrice() {
+        //     const nylonCost = parseFloat(document.getElementById('nylon').value) || 0;
+        //     const zipperCost = parseFloat(document.getElementById('zipper').value) || 0;
+        //     const cursorCost = parseFloat(document.getElementById('cursor').value) || 0;
+        //     const quantity = parseInt(document.getElementById('quantity').value) || 0;
+        //     const profitMargin = parseFloat(document.getElementById('profit').value) || 0;
+
+        //     const totalCost = nylonCost + zipperCost + (cursorCost * quantity);
+        //     const profit = totalCost * (profitMargin / 100);
+        //     const suggestedPrice = totalCost + profit;
+
+        //     const shopeeFee = suggestedPrice * 0.12;
+        //     const elo7Fee = suggestedPrice * 0.18;
+        //     const shopeePrice = suggestedPrice + shopeeFee;
+        //     const elo7Price = suggestedPrice + elo7Fee;
+
+        //     const resultDiv = document.getElementById('result');
+        //     resultDiv.innerHTML = `
+        //         <strong>Resultados:</strong>
+        //         <p>Custo total: R$ ${totalCost.toFixed(2)}</p>
+        //         <p>Preço sugerido (presencial): R$ ${suggestedPrice.toFixed(2)}</p>
+        //         <p>Preço sugerido (Shopee): R$ ${shopeePrice.toFixed(2)} (inclui 12% de comissão)</p>
+        //         <p>Preço sugerido (Elo7): R$ ${elo7Price.toFixed(2)} (inclui 18% de comissão)</p>
+        //     `;
+        // }
+    </script>
+</body>
+</html>
